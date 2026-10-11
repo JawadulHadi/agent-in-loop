@@ -1,6 +1,6 @@
 # agent-in-loop
 
-A tool-calling agent in about 250 lines of plain Python. No LangChain, no framework: just the loop,
+A tool-calling agent in about 330 lines of plain Python. No LangChain, no framework: just the loop,
 so you can see exactly what an agent is.
 
 ```

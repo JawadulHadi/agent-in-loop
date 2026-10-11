@@ -4,3 +4,7 @@ __pycache__/
 run.jsonl
 .pytest_cache/
 .ruff_cache/
+*.egg-info/
+build/
+dist/
+.env

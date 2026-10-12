@@ -9,6 +9,10 @@ Every change adds an entry under **Unreleased** in the same pull request. CI che
 ## [Unreleased]
 
 ### Added
+- Vercel demo page: `api/index.py` replays a scripted agent run (no model is called) and shows
+  each step, the recovered protocol error and the declined `write_file`. `GET /api/run` returns
+  the same run as JSON. `vercel.json` routes every path to it. This fixes the Vercel build error
+  "No python entrypoint found". Tests in `tests/test_vercel_demo.py`.
 - `CHANGELOG.md` (this file), a pull request template, and a CI job that fails a pull request
   which changes code but not the changelog. Label a PR `skip-changelog` to bypass it.
 - README "Changelog and contributing" section.

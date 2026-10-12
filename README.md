@@ -27,6 +27,13 @@ ollama pull llama3.2            # free, local
 python -m agent_loop 'search my notes for the failure story and summarise it'
 ```
 
+## Live demo
+
+<https://agent-in-loop.vercel.app> replays a scripted run on Vercel: the parser, tools, caps and
+human-approval gate are the real code, but `ScriptedLLM` supplies the model replies, so no model
+is called and the page costs nothing to host. `/api/run` returns the same run as JSON. The entry
+point is `api/index.py`; run it locally with `python -c "from api.index import run_demo; print(run_demo())"`.
+
 ## Design decisions
 
 - **Plain JSON, not native function calling.** It works with any model, including small local ones.

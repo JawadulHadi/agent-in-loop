@@ -42,4 +42,15 @@ python -m agent_loop 'search my notes for the failure story and summarise it'
 - Small models sometimes ignore the protocol. Check `run.jsonl` to see where.
 - The calculator allows only arithmetic and caps exponents.
 
+## Changelog and contributing
+
+Every change adds an entry under **Unreleased** in [`CHANGELOG.md`](CHANGELOG.md) and updates this
+README when behaviour, setup or limits change. A CI job fails any pull request that skips the
+changelog (label it `skip-changelog` for changes that truly need none). Before opening a PR:
+
+```bash
+ruff check .
+pytest -q
+```
+
 See `NOTES.md` for mistakes made and fixed.
